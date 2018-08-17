@@ -1,6 +1,9 @@
-<h2>회원가입</h2>
-<form method="post" action="">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="회원가입" />
-</form>
+{% extends "diet/layout.html" %} {% block content %}
+<div class="signup_container">
+    <span class="signup_container__title">회원가입</span>
+    <form method="post" action="" class="signup_container__form">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="가입하기" class="signup_submit" />
+    </form>
+</div>
+{% endblock %}

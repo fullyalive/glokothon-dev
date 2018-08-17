@@ -1,10 +1,9 @@
-{% extends "diet/layout.html" %}
-
-{% block content %}
-<h2>로그인</h2>
-<form method="post" action="">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="로그인" />
-</form>
+{% extends "diet/layout.html" %} {% block content %}
+<div class="login_container">
+    <span class="login_container__title">로그인</span>
+    <form method="post" action="" class="login_container__form">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="로그인" class="login_submit"/>
+    </form>
+</div>
 {% endblock %}
