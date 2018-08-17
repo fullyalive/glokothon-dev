@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     re_path(r'^$', views.index, name='index'),
     re_path(r'^signup/$', views.signup, name='signup'),
+    re_path(r'^signin/$', views.signin, name='signin'),
 ]
 
 
